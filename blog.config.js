@@ -19,7 +19,7 @@ const BLOG = {
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '弗是矣', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || '', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://notion-next-orcin-tau.vercel.app/', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
@@ -39,50 +39,50 @@ const BLOG = {
 
   // START ************网站字体*****************
 
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
-  // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
-  FONT_URL: [
-    // 'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
-    'https://fonts.googleapis.com/css?family=Bitter&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
-  ],
-  // 无衬线字体 例如'"LXGW WenKai"'
-  FONT_SANS: [
-    // '"LXGW WenKai"',
-    '"PingFang SC"',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Hiragino Sans GB"',
-    '"Microsoft YaHei"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Segoe UI"',
-    '"Noto Sans SC"',
-    'HarmonyOS_Regular',
-    '"Helvetica Neue"',
-    'Helvetica',
-    '"Source Han Sans SC"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"'
-  ],
-  // 衬线字体 例如'"LXGW WenKai"'
-  FONT_SERIF: [
-    // '"LXGW WenKai"',
-    'Bitter',
-    '"Noto Serif SC"',
-    'SimSun',
-    '"Times New Roman"',
-    'Times',
-    'serif',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-    '"Apple Color Emoji"'
-  ],
-  FONT_AWESOME: process.env.NEXT_PUBLIC_FONT_AWESOME_PATH || 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
+FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
+// 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
+FONT_URL: [
+  'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
+  'https://fonts.googleapis.com/css?family=Bitter&display=swap',
+  'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
+  'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
+],
+// 无衬线字体 例如'"LXGW WenKai"'
+FONT_SANS: [
+  '"LXGW WenKai"',
+  '"PingFang SC"',
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Hiragino Sans GB"',
+  '"Microsoft YaHei"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+  '"Segoe UI"',
+  '"Noto Sans SC"',
+  'HarmonyOS_Regular',
+  '"Helvetica Neue"',
+  'Helvetica',
+  '"Source Han Sans SC"',
+  'Arial',
+  'sans-serif',
+  '"Apple Color Emoji"'
+],
+// 衬线字体 例如'"LXGW WenKai"'
+FONT_SERIF: [
+  '"LXGW WenKai"',
+  'Bitter',
+  '"Noto Serif SC"',
+  'SimSun',
+  '"Times New Roman"',
+  'Times',
+  'serif',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+  '"Apple Color Emoji"'
+],
+FONT_AWESOME: process.env.NEXT_PUBLIC_FONT_AWESOME_PATH || 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
 
-  // END ************网站字体*****************
+// END ************网站字体*****************
   CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU: process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU || true, // 自定义右键菜单，覆盖系统菜单
 
@@ -127,7 +127,7 @@ const BLOG = {
   SUB_PATH: '', // leave this empty unless you want to deploy in a folder
 
   POST_SHARE_BAR_ENABLE: process.env.NEXT_PUBLIC_POST_SHARE_BAR || 'true', // 文章分享功能 ，将在底部显示一个分享条
-  POSTS_SHARE_SERVICES: process.env.NEXT_PUBLIC_POST_SHARE_SERVICES || 'link,wechat,qq,weibo,email,facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin', // 分享的服務，按顺序显示,逗号隔开
+  POSTS_SHARE_SERVICES: process.env.NEXT_PUBLIC_POST_SHARE_SERVICES || 'link,wechat,qq,weibo,email', // 分享的服務，按顺序显示,逗号隔开
   // 所有支持的分享服务：link(复制链接),wechat(微信),qq,weibo(微博),email(邮件),facebook,twitter,telegram,messenger,line,reddit,whatsapp,linkedin,vkshare,okshare,tumblr,livejournal,mailru,viber,workplace,pocket,instapaper,hatena
 
   POST_URL_PREFIX: process.env.NEXT_PUBLIC_POST_URL_PREFIX || 'article',
@@ -189,7 +189,7 @@ const BLOG = {
   WIDGET_PET_LINK:
         process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
         'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
-  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
+  WIDGET_PET_SWITCH_THEME: process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || false, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
   MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
